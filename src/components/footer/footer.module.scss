@@ -1,0 +1,54 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(70px);
+  border-radius: 20px 20px 0px 0px;
+
+  @include breakpoint(1300px) {
+    overflow-x: auto;
+    max-width: 1165px;
+    width: 100%;
+  }
+}
+
+.footer__container {
+  padding: 35px 48px 56px;
+  @include breakpoint($xxxl) {
+    padding: 35px 40px 56px;
+  }
+  @include breakpoint(1300px) {
+    width: 1165px;
+  }
+}
+
+.footer__inner {
+  position: relative;
+  h4 {
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.footer__search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__button {
+  font-weight: 500;
+  padding: 27px 96px;
+  background-color: #91cb82;
+  border-radius: 10px;
+  color: #fff;
+  @include breakpoint($xxxl) {
+    padding: 27px 30px;
+  }
+}

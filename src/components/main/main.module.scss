@@ -1,0 +1,128 @@
+@import "../../styles/vars.scss";
+@import "../../styles/mixins.scss";
+
+.main {
+  width: 100%;
+  padding-top: 213px;
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint($xxl) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+  }
+  @include breakpoint($md) {
+    padding-top: 330px;
+  }
+  @include breakpoint($sm) {
+    padding-top: 320px;
+  }
+}
+
+.main__titles {
+  width: 65%;
+  @include breakpoint($xxl) {
+    width: 100%;
+  }
+  h1 {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 96px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 47px 0 32px;
+    max-width: 860px;
+    width: 100%;
+    @include breakpoint($xxl) {
+      display: block;
+      margin: 0 auto 20px;
+      font-size: 56px;
+      text-align: center;
+    }
+    @include breakpoint($xl) {
+      font-size: 56px;
+    }
+    @include breakpoint($sm) {
+      font-size: 46px;
+    }
+  }
+  h2 {
+    width: 75%;
+    font-size: 28px;
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 485px;
+    width: 100%;
+    @include breakpoint($xxl) {
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin: 0 auto 50px;
+    }
+    @include breakpoint($xl) {
+      font-size: 24px;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  margin-right: -240px;
+  max-height: 400px;
+  @include breakpoint($xxl) {
+    margin-right: 0;
+    max-height: 296px;
+  }
+}
+
+.slider__content {
+  max-width: 204px;
+  width: 100%;
+  position: relative;
+  padding: 48px 60px 48px 36px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(70px);
+  border-radius: 16px 0px 0px 16px;
+  @include breakpoint($xxl) {
+    padding: 48px 10px 48px 30px;
+  }
+  @include breakpoint($md) {
+    display: none;
+  }
+  span {
+    font-family: "SF Pro Display", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    opacity: 0.5;
+  }
+  h2 {
+    font-size: 36px;
+    margin-top: 36px;
+    line-height: 135%;
+    @include breakpoint($xxl) {
+      font-size: 30px;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 48px;
+    z-index: 2;
+  }
+}
+.slider__imgConteiner {
+  @include breakpoint($xxl) {
+    max-width: 200px;
+  }
+  @include breakpoint($md) {
+    display: none;
+  }
+  .slider__img {
+    position: relative;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+    @include breakpoint($xxl) {
+      border-radius: 0 16px 16px 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "./vars.scss";
+
+@font-face {
+  font-family: "SF ProText";
+  src: url("../fonts/SF-Pro-Text-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../fonts/SF-Pro-Display-Heavy.ttf") format("ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: $white;
+  line-height: 1;
+  font-family: "SF ProText", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  color: $white;
+}
